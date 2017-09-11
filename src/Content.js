@@ -12,7 +12,6 @@ class Content extends Component {
   render() {
     return (
         <List style={styles.listTemplate}>
-            <Divider/>
             <ListItem primaryText="Poop1"/>
             <Divider/>
             <ListItem primaryText="Poop2"/>
