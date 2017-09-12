@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import Header from './Header.js';
-// import Content from './Content.js';
+import Search from './Search.js';
+import Table from './Table.js';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './App.css';
 
@@ -71,15 +71,13 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div>
-          <form>
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={this.onSearchChange}/>
-          </form>
-          { data.filter(isSearched(searchTerm)).map(item => 
-            <div key={item.objectID}>{item.name}</div>
-          )}
+          <Search
+            value={searchTerm}
+            onChange={this.onSearchChange} />
+          <Table
+            data={data}
+            pattern={searchTerm}
+            isSearched={isSearched} />
         </div>
       </MuiThemeProvider>
     );
