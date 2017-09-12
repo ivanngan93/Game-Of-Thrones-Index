@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './Header.js';
 import Search from './Search.js';
 import Table from './Table.js';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -71,8 +72,8 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div>
+          <Header />
           <Search
-            value={searchTerm}
             onChange={this.onSearchChange} />
           <Table
             data={data}

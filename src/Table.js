@@ -1,10 +1,13 @@
 import React from 'react';
+import { List, ListItem } from 'material-ui/List';
 
 const Table = ({ data, pattern, isSearched }) =>
-<div>
-  { data.filter(isSearched(pattern)).map(item => 
-    <div key={item.objectID}>{item.name}</div>
-  )}
-</div>
+  <List>
+    { data.filter(isSearched(pattern)).map(item => 
+      <ListItem key={item.objectID}>
+        {item.name}
+      </ListItem>
+    )}
+  </List>
 
 export default Table;
