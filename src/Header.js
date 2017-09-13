@@ -3,7 +3,7 @@ import AppBar from 'material-ui/AppBar';
 
 const Header = () =>
   <AppBar 
-    title="Ivan's Ghetto Recipe Book"
+    title="Game of Throne Index"
     showMenuIconButton={false} />
 
 export default Header;
